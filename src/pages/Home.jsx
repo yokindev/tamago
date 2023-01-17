@@ -1,4 +1,6 @@
 import { useNavigate } from "react-router-dom";
+import * as S from "../styles/Home.styles";
+import Dragon from "../assets/images/hello.png";
 
 export default function Home() {
   const toGame = useNavigate();
@@ -14,13 +16,16 @@ export default function Home() {
 
   return (
     <div>
-      <h1>Train your dragon</h1>
-      <input
-        type="text"
-        placeholder="Enter a name"
-        onChange={(e) => setName(e)}
-      />
-      <button onClick={play}>PLAY</button>
+      <S.Container>
+        <S.Title>TRAIN YOUR DRAGON</S.Title>
+        <S.Logo src={Dragon} />
+        <S.Input
+          type="text"
+          placeholder="Enter a name ..."
+          onChange={(e) => setName(e)}
+        />
+        <S.Button onClick={play}>GO</S.Button>
+      </S.Container>
     </div>
   );
 }
