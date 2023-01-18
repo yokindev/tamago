@@ -1,4 +1,5 @@
 import StatusBars from "../components/StatusBars";
+import Moods from "../components/Moods";
 import Buttons from "../components/Buttons";
 import * as S from "../styles/Home.styles";
 import { useState } from "react";
@@ -11,6 +12,7 @@ export default function Game() {
   return (
     <S.Container>
       <StatusBars health={health} happiness={happiness} sleep={sleep} />
+      <Moods />
       <Buttons
         health={health}
         happiness={happiness}
