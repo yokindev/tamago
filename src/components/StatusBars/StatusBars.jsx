@@ -12,15 +12,21 @@ export default function StatusBars({ health, happiness, sleep }) {
       <S.Name>{name}</S.Name>
       <S.ContainerBar>
         <S.Icon src={IconLife} />
-        <S.ProgressBar />
+        <S.ProgressBar>
+          <S.Percentage style={{ width: `${health}%` }} />
+        </S.ProgressBar>
       </S.ContainerBar>
       <S.ContainerBar>
         <S.Icon src={IconHappiness} />
-        <S.ProgressBar />
+        <S.ProgressBar>
+          <S.Percentage style={{ width: `${happiness}%` }} />
+        </S.ProgressBar>
       </S.ContainerBar>
       <S.ContainerBar>
         <S.Icon src={IconSleep} />
-        <S.ProgressBar />
+        <S.ProgressBar>
+          <S.Percentage style={{ width: `${sleep}%` }} />
+        </S.ProgressBar>
       </S.ContainerBar>
     </S.Container>
   );

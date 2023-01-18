@@ -25,10 +25,18 @@ export const Icon = styled.img`
 
 export const ProgressBar = styled.div`
   width: 200px;
-  height: 15px;
+  height: 20px;
   margin-top: 10px;
   border: 3px solid #3d5a80;
   border-radius: 50px;
   box-shadow: 0 0 10px #98c1d9;
   background-color: white;
+`;
+
+export const Percentage = styled.span`
+  display: block;
+  height: 100%;
+  background-color: #98c1d9;
+  border-radius: 50px;
+  animation: progress 1500ms ease-in 1;
 `;

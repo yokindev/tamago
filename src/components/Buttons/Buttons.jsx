@@ -13,11 +13,11 @@ export default function Buttons({
   setSleep,
 }) {
   const eat = () => {
-    setHealth(health + 25);
+    setHealth(health + 5);
   };
 
   const fun = () => {
-    setHappiness(happiness + 25);
+    setHappiness(happiness + 5);
   };
 
   const rest = () => {
