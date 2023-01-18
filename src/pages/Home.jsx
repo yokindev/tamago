@@ -15,17 +15,15 @@ export default function Home() {
   };
 
   return (
-    <div>
-      <S.Container>
-        <S.Title>TRAIN YOUR DRAGON</S.Title>
-        <S.Logo src={Dragon} />
-        <S.Input
-          type="text"
-          placeholder="Enter a name ..."
-          onChange={(e) => setName(e)}
-        />
-        <S.Button onClick={play}>GO</S.Button>
-      </S.Container>
-    </div>
+    <S.Container>
+      <S.Title>TRAIN YOUR DRAGON</S.Title>
+      <S.Logo src={Dragon} />
+      <S.Input
+        type="text"
+        placeholder="Enter a name ..."
+        onChange={(e) => setName(e)}
+      />
+      <S.Button onClick={play}>GO</S.Button>
+    </S.Container>
   );
 }

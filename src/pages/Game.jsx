@@ -1,5 +1,5 @@
-export default function Game() {
-  const name = localStorage.getItem("Name");
+import * as S from "../styles/Home.styles";
 
-  return <div>Mi mascota se llama {name}</div>;
+export default function Game() {
+  return <S.Container></S.Container>;
 }
