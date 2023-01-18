@@ -11,6 +11,7 @@ export const Button = styled.button`
   padding: 15px;
   border-radius: 50px;
   background-color: white;
+  cursor: pointer;
 `;
 
 export const Icon = styled.img`
