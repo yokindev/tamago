@@ -5,7 +5,7 @@ import * as S from "../styles/Home.styles";
 import { useState } from "react";
 
 export default function Game() {
-  const [health, setHealth] = useState(100);
+  const [health, setHealth] = useState(80);
   const [happiness, setHappiness] = useState(50);
   const [sleep, setSleep] = useState(100);
 

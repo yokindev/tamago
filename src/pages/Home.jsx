@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <S.Container>
       <S.Title>TRAIN YOUR DRAGON</S.Title>
-      <S.Logo src={Dragon} />
+      <S.Image src={Dragon} />
       <S.Input
         type="text"
         placeholder="Enter a name ..."

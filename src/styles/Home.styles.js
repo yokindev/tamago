@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   height: 100vh;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,7 +15,7 @@ export const Title = styled.h1`
   font-weight: 900;
 `;
 
-export const Logo = styled.img`
+export const Image = styled.img`
   width: 256px;
 `;
 
