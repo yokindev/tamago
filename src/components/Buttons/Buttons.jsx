@@ -13,7 +13,9 @@ export default function Buttons({
   setSleep,
 }) {
   const eat = () => {
-    setHealth(health + 5);
+    while (health < 95) {
+      setHealth(health + 5);
+    }
   };
 
   const fun = () => {
@@ -21,11 +23,15 @@ export default function Buttons({
   };
 
   const rest = () => {
-    setSleep(sleep + 50);
+    while (sleep < 50) {
+      setSleep(sleep + 50);
+    }
   };
 
   const cure = () => {
-    setHealth(health + 50);
+    while (health < 50) {
+      setHealth(health + 50);
+    }
   };
 
   return (
