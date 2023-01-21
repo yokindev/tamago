@@ -12,24 +12,20 @@ export default function Buttons({
   sleep,
   setSleep,
 }) {
-  const eat = () => {
-      setHealth(health + 5);
+  const eat = (health) => {
+    setHealth(health + 25);
   };
 
   const fun = () => {
-    setHappiness(happiness + 5);
+    setHappiness(happiness + 25);
   };
 
   const rest = () => {
-    while (sleep < 50) {
-      setSleep(sleep + 50);
-    }
+    setSleep(sleep + 50);
   };
 
   const cure = () => {
-    while (health < 50) {
-      setHealth(health + 50);
-    }
+    setHealth(health + 50);
   };
 
   return (
