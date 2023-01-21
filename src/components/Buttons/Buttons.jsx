@@ -3,6 +3,7 @@ import IconMusic from "../../assets/icons/music.png";
 import IconBed from "../../assets/icons/bed.png";
 import IconMedicine from "../../assets/icons/medicine.png";
 import * as S from "./Buttons.styles";
+import { useEffect } from "react";
 
 export default function Buttons({
   health,
@@ -12,34 +13,26 @@ export default function Buttons({
   sleep,
   setSleep,
 }) {
-  const eat = (health) => {
-    setHealth(health + 25);
-  };
-
-  const fun = () => {
-    setHappiness(happiness + 25);
-  };
-
-  const rest = () => {
-    setSleep(sleep + 50);
-  };
-
-  const cure = () => {
-    setHealth(health + 50);
-  };
+  useEffect(() => {
+    if (health && happiness && sleep) {
+      localStorage.setItem("Health", health);
+      localStorage.setItem("Happiness", happiness);
+      localStorage.setItem("Sleep", sleep);
+    }
+  }, [health, happiness, sleep]);
 
   return (
     <S.Container>
-      <S.Button onClick={() => eat()}>
+      <S.Button onClick={() => setHealth(health + 25)}>
         <S.Icon src={IconFood} />
       </S.Button>
-      <S.Button onClick={() => fun()}>
+      <S.Button onClick={() => setHappiness(happiness + 25)}>
         <S.Icon src={IconMusic} />
       </S.Button>
-      <S.Button onClick={() => rest()}>
+      <S.Button onClick={() => setSleep(sleep + 50)}>
         <S.Icon src={IconBed} />
       </S.Button>
-      <S.Button onClick={() => cure()}>
+      <S.Button onClick={() => setHealth(health + 50)}>
         <S.Icon src={IconMedicine} />
       </S.Button>
     </S.Container>

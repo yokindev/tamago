@@ -5,31 +5,10 @@ import * as S from "./StatusBars.styles";
 
 const name = localStorage.getItem("Name");
 
-export default function StatusBars({
-  health,
-  setHealth,
-  happiness,
-  setHappiness,
-  sleep,
-  setSleep,
-}) {
-  if(health > 0) {
-    setTimeout(() => {
-      setHealth(health - 1)
-    }, 4000);
-  }
-
-  if(happiness > 0) {
-    setTimeout(() => {
-      setHappiness(happiness - 1)
-    }, 2000);
-  }
-
-  if(sleep > 0) {
-    setTimeout(() => {
-      setSleep(sleep - 1)
-    }, 2000);
-  }
+export default function StatusBars() {
+  const health = localStorage.getItem("Health")
+  const happiness = localStorage.getItem('Happiness')
+  const sleep = localStorage.getItem('Sleep')
 
   return (
     <S.Container>

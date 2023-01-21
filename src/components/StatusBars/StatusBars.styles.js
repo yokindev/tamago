@@ -39,4 +39,5 @@ export const Percentage = styled.span`
   background-color: #98c1d9;
   border-radius: 50px;
   animation: progress 1500ms ease-in 1;
+  animation: progress 1500ms ease-out 1;
 `;
