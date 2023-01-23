@@ -14,30 +14,26 @@ export default function Buttons({
 }) {
   const eat = () => {
     if (health <= 75) {
-      setHealth(health + 25);
+      setHealth((health) => health + 25);
     }
-    localStorage.setItem("Health", health);
   };
 
   const fun = () => {
     if (happiness <= 75) {
-      setHappiness(happiness + 25);
+      setHappiness((happiness) => happiness + 25);
     }
-    localStorage.setItem("Happiness", happiness);
   };
 
   const rest = () => {
     if (sleep <= 50) {
-      setSleep(sleep + 50);
+      setSleep((sleep) => sleep + 50);
     }
-    localStorage.setItem("Sleep", sleep);
   };
 
   const medicine = () => {
     if (health <= 50) {
-      setHealth(health + 50);
+      setHealth((health) => health + 50);
     }
-    localStorage.setItem("Health", health);
   };
 
   return (

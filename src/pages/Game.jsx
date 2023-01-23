@@ -7,25 +7,7 @@ import { useState } from "react";
 export default function Game() {
   const [health, setHealth] = useState(50);
   const [happiness, setHappiness] = useState(50);
-  const [sleep, setSleep] = useState(100);
-
-  if (health >= 1) {
-    setTimeout(() => {
-      setHealth(health - 1);
-    }, 2000);
-  }
-
-  if (happiness >= 1) {
-    setTimeout(() => {
-      setHappiness(happiness - 1);
-    }, 3000);
-  }
-
-  if (sleep >= 1) {
-    setTimeout(() => {
-      setSleep(sleep - 1);
-    }, 4000);
-  }
+  const [sleep, setSleep] = useState(50);
 
   localStorage.setItem("Health", health);
   localStorage.setItem("Happiness", happiness);
@@ -33,11 +15,12 @@ export default function Game() {
 
   return (
     <S.Container>
-      <StatusBars
-        health={health}
+      <StatusBars health={health}
         happiness={happiness}
         sleep={sleep}
-      />
+        setHealth={setHealth}
+        setHappiness={setHappiness}
+        setSleep={setSleep}/>
       <Moods />
       <Buttons
         health={health}
