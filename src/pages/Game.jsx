@@ -15,13 +15,15 @@ export default function Game() {
 
   return (
     <S.Container>
-      <StatusBars health={health}
+      <StatusBars
+        health={health}
         happiness={happiness}
         sleep={sleep}
         setHealth={setHealth}
         setHappiness={setHappiness}
-        setSleep={setSleep}/>
-      <Moods />
+        setSleep={setSleep}
+      />
+      <Moods health={health} happiness={happiness} sleep={sleep} />
       <Buttons
         health={health}
         happiness={happiness}
