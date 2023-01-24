@@ -1,23 +1,29 @@
 import { useNavigate } from "react-router-dom";
 import * as S from "../styles/Home.styles";
-import Dragon from "../assets/images/hello.png";
+import DragonImage1 from "../assets/images/hello.png";
+import DragonImage2 from "../assets/images/proud.png";
+import DragonImage3 from "../assets/images/relaxed.png";
 
 export default function Home() {
-  const toGame = useNavigate();
+  localStorage.clear();
+
+  const images = [DragonImage1, DragonImage2, DragonImage3];
+  const randomImage = Math.floor(Math.random() * images.length);
 
   const setName = (e) => {
     const name = e.target.value;
     localStorage.setItem("Name", name);
   };
 
+  const navigate = useNavigate();
   const play = () => {
-    toGame("/game");
+    navigate("/game");
   };
 
   return (
     <S.Container>
       <S.Title>TRAIN YOUR DRAGON</S.Title>
-      <S.Image src={Dragon} />
+      <S.Image src={images[randomImage]} />
       <S.Input
         type="text"
         placeholder="Enter a name ..."
