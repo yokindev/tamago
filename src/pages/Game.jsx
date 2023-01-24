@@ -5,9 +5,9 @@ import * as S from "../styles/Home.styles";
 import { useState } from "react";
 
 export default function Game() {
-  const [health, setHealth] = useState(50);
-  const [happiness, setHappiness] = useState(50);
-  const [sleep, setSleep] = useState(50);
+  const [health, setHealth] = useState(100);
+  const [happiness, setHappiness] = useState(100);
+  const [sleep, setSleep] = useState(100);
 
   localStorage.setItem("Health", health);
   localStorage.setItem("Happiness", happiness);

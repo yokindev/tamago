@@ -36,5 +36,4 @@ export const Percentage = styled.span`
   display: block;
   height: 100%;
   background-color: #98c1d9;
-  animation: progress 1500ms ease-in 1;
 `;
