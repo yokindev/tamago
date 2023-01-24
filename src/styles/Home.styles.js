@@ -5,18 +5,19 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   background-color: #e0fbfc;
 `;
 
 export const Title = styled.h1`
+  margin: 0;
   text-align: center;
   font-size: 40px;
   font-weight: 900;
 `;
 
 export const Image = styled.img`
-  width: 256px;
+  width: 300px;
 `;
 
 export const Input = styled.input`
@@ -24,8 +25,6 @@ export const Input = styled.input`
   width: 200px;
   border-radius: 50px;
   padding: 15px;
-  margin-bottom: 25px;
-  margin-top: 25px;
   font-weight: 900;
   font-size: 15px;
   text-align: center;
