@@ -8,6 +8,7 @@ export default function Game() {
   const [health, setHealth] = useState(100);
   const [happiness, setHappiness] = useState(100);
   const [sleep, setSleep] = useState(100);
+  const [image, setImage] = useState('')
 
   localStorage.setItem("Health", health);
   localStorage.setItem("Happiness", happiness);
@@ -23,7 +24,7 @@ export default function Game() {
         setHappiness={setHappiness}
         setSleep={setSleep}
       />
-      <Moods health={health} happiness={happiness} sleep={sleep} />
+      <Moods health={health} happiness={happiness} sleep={sleep} image={image}/>
       <Buttons
         health={health}
         happiness={happiness}
@@ -31,6 +32,7 @@ export default function Game() {
         setHealth={setHealth}
         setHappiness={setHappiness}
         setSleep={setSleep}
+        setImage={setImage}
       />
     </S.Container>
   );

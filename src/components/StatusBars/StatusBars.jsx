@@ -19,7 +19,7 @@ export default function StatusBars({
 
     const healthCountDown = setTimeout(() => {
       setHealth(health - 1);
-    }, 2000);
+    }, 1000);
 
     return () => {
       clearTimeout(healthCountDown)
@@ -32,7 +32,7 @@ export default function StatusBars({
 
     const happinessCountDown = setTimeout(() => {
       setHappiness(happiness - 1);
-    }, 3000);
+    }, 1000);
 
     return () => {
       clearTimeout(happinessCountDown)
@@ -45,7 +45,7 @@ export default function StatusBars({
 
     const sleepCountDown = setTimeout(() => {
       setSleep(sleep - 1);
-    }, 4000);
+    }, 1000);
 
     return () => {
       clearTimeout(sleepCountDown)

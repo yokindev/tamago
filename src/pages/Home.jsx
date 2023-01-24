@@ -5,8 +5,6 @@ import DragonImage2 from "../assets/images/proud.png";
 import DragonImage3 from "../assets/images/relaxed.png";
 
 export default function Home() {
-  localStorage.clear();
-
   const images = [DragonImage1, DragonImage2, DragonImage3];
   const randomImage = Math.floor(Math.random() * images.length);
 
