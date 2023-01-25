@@ -5,6 +5,8 @@ import IconMedicine from "../../assets/icons/medicine.png";
 import DragonEat from "../../assets/images/eat.png";
 import DragonFun from "../../assets/images/sing.png";
 import DragonRest from "../../assets/images/happy.png";
+import DragonMedicine from "../../assets/images/sick.png";
+import DragonDefault from "../../assets/images/proud.png";
 import * as S from "./Buttons.styles";
 
 export default function Buttons({
@@ -20,6 +22,10 @@ export default function Buttons({
     if (health <= 75) {
       setHealth((health) => health + 25);
       setImage(DragonEat);
+
+      setTimeout(() => {
+        setImage(DragonDefault);
+      }, 3000);
     }
   };
 
@@ -27,6 +33,10 @@ export default function Buttons({
     if (happiness <= 75) {
       setHappiness((happiness) => happiness + 25);
       setImage(DragonFun);
+
+      setTimeout(() => {
+        setImage(DragonDefault);
+      }, 3000);
     }
   };
 
@@ -34,12 +44,21 @@ export default function Buttons({
     if (sleep <= 50) {
       setSleep((sleep) => sleep + 50);
       setImage(DragonRest);
+
+      setTimeout(() => {
+        setImage(DragonDefault);
+      }, 3000);
     }
   };
 
   const medicine = () => {
     if (health <= 50) {
       setHealth((health) => health + 50);
+      setImage(DragonMedicine);
+
+      setTimeout(() => {
+        setImage(DragonDefault);
+      }, 3000);
     }
   };
 
