@@ -7,6 +7,7 @@ import DragonFun from "../../assets/images/sing.png";
 import DragonRest from "../../assets/images/happy.png";
 import DragonMedicine from "../../assets/images/sick.png";
 import DragonDefault from "../../assets/images/proud.png";
+import DragonNo from '../../assets/images/no.png'
 import * as S from "./Buttons.styles";
 
 export default function Buttons({
@@ -26,6 +27,12 @@ export default function Buttons({
       setTimeout(() => {
         setImage(DragonDefault);
       }, 3000);
+    } else {
+      setImage(DragonNo)
+
+      setTimeout(() => {
+        setImage(DragonDefault);
+      }, 2000);
     }
   };
 
@@ -37,6 +44,12 @@ export default function Buttons({
       setTimeout(() => {
         setImage(DragonDefault);
       }, 3000);
+    } else {
+      setImage(DragonNo)
+
+      setTimeout(() => {
+        setImage(DragonDefault);
+      }, 2000);
     }
   };
 
@@ -48,6 +61,12 @@ export default function Buttons({
       setTimeout(() => {
         setImage(DragonDefault);
       }, 3000);
+    } else {
+      setImage(DragonNo)
+
+      setTimeout(() => {
+        setImage(DragonDefault);
+      }, 2000);
     }
   };
 
@@ -59,6 +78,12 @@ export default function Buttons({
       setTimeout(() => {
         setImage(DragonDefault);
       }, 3000);
+    } else {
+      setImage(DragonNo)
+
+      setTimeout(() => {
+        setImage(DragonDefault);
+      }, 2000);
     }
   };
 
