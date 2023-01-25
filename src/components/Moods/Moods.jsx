@@ -1,6 +1,6 @@
 import * as S from "./Moods.styles";
 
-export default function Moods({ health, happiness, sleep, image }) {
+export default function Moods({ health, happiness, sleep, image, setImage }) {
   // const chooseImage = () => {
   //   switch (health) {
   //     case health < 75 & health > 50:
