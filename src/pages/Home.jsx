@@ -27,7 +27,7 @@ export default function Home() {
         placeholder="Enter a name ..."
         onChange={(e) => setName(e)}
       />
-      <S.Button onClick={play}>GO</S.Button>
+      <S.Button onClick={play}>Go</S.Button>
     </S.Container>
   );
 }

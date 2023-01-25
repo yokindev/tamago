@@ -7,9 +7,13 @@ export const Container = styled.div`
 `;
 
 export const Name = styled.h1`
-  font-size: 45px;
   margin: 0;
   margin-bottom: 15px;
+  font-size: 45px;
+  font-weight: 900;
+  background: -webkit-linear-gradient(270deg, #3d5a80, #98c1d9, #ee6c4d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 `;
 
 export const ContainerBar = styled.div`

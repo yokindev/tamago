@@ -12,8 +12,11 @@ export const Container = styled.div`
 export const Title = styled.h1`
   margin: 0;
   text-align: center;
-  font-size: 40px;
+  font-size: 45px;
   font-weight: 900;
+  background: -webkit-linear-gradient(270deg, #3d5a80, #98c1d9, #ee6c4d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 `;
 
 export const Image = styled.img`
