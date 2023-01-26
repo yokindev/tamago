@@ -1,4 +1,4 @@
-import { MoodsImage } from "../../styles/Moods.styles";
+import { MoodsImage } from "../styles/Moods.styles";
 
 export default function Moods({ health, happiness, sleep, image, setImage }) {
 

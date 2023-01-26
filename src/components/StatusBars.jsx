@@ -1,6 +1,6 @@
-import IconLife from "../../assets/icons/life.png";
-import IconSleep from "../../assets/icons/sleep.png";
-import IconHappiness from "../../assets/icons/happiness.png";
+import IconLife from "../assets/icons/life.png";
+import IconSleep from "../assets/icons/sleep.png";
+import IconHappiness from "../assets/icons/happiness.png";
 import {
   StatusBarContainer,
   StatusBarTitle,
@@ -8,7 +8,7 @@ import {
   StatusBarIcon,
   StatusBarDiv,
   StatusBarPercentage,
-} from "../../styles/StatusBars.styles";
+} from "../styles/StatusBars.styles";
 import { useEffect } from "react";
 
 const name = localStorage.getItem("Name");

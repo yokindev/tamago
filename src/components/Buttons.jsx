@@ -1,17 +1,17 @@
-import IconFood from "../../assets/icons/food.png";
-import IconMusic from "../../assets/icons/music.png";
-import IconBed from "../../assets/icons/bed.png";
-import IconMedicine from "../../assets/icons/medicine.png";
-import DragonEat from "../../assets/images/eat.png";
-import DragonSing from "../../assets/images/sing.png";
-import DragonRest from "../../assets/images/rest.png";
-import DragonYoga from "../../assets/images/yoga.png";
-import DragonNo from "../../assets/images/no.png";
+import IconFood from "../assets/icons/food.png";
+import IconMusic from "../assets/icons/music.png";
+import IconBed from "../assets/icons/bed.png";
+import IconMedicine from "../assets/icons/medicine.png";
+import DragonEat from "../assets/images/eat.png";
+import DragonSing from "../assets/images/sing.png";
+import DragonRest from "../assets/images/rest.png";
+import DragonYoga from "../assets/images/yoga.png";
+import DragonNo from "../assets/images/no.png";
 import {
   ButtonsContainer,
   ButtonsBox,
   ButtonsIcon,
-} from "../../styles/Buttons.styles";
+} from "../styles/Buttons.styles";
 
 export default function Buttons({
   health,
