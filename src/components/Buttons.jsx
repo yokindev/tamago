@@ -2,6 +2,7 @@ import IconFood from "../assets/icons/food.png";
 import IconMusic from "../assets/icons/music.png";
 import IconBed from "../assets/icons/bed.png";
 import IconMedicine from "../assets/icons/medicine.png";
+import DragonDefault from "../assets/images/default.png";
 import DragonEat from "../assets/images/eat.png";
 import DragonSing from "../assets/images/sing.png";
 import DragonRest from "../assets/images/rest.png";
@@ -21,7 +22,6 @@ export default function Buttons({
   sleep,
   setSleep,
   setImage,
-  dragonImages,
 }) {
   const eat = () => {
     if (health <= 75) {
@@ -29,13 +29,13 @@ export default function Buttons({
       setImage(DragonEat);
 
       setTimeout(() => {
-        setImage(dragonImages);
+        setImage(DragonDefault);
       }, 3000);
     } else {
       setImage(DragonNo);
 
       setTimeout(() => {
-        setImage(dragonImages);
+        setImage(DragonDefault);
       }, 2000);
     }
   };
@@ -46,13 +46,13 @@ export default function Buttons({
       setImage(DragonSing);
 
       setTimeout(() => {
-        setImage(dragonImages);
+        setImage(DragonDefault);
       }, 3000);
     } else {
       setImage(DragonNo);
 
       setTimeout(() => {
-        setImage(dragonImages);
+        setImage(DragonDefault);
       }, 2000);
     }
   };
@@ -63,13 +63,13 @@ export default function Buttons({
       setImage(DragonRest);
 
       setTimeout(() => {
-        setImage(dragonImages);
+        setImage(DragonDefault);
       }, 3000);
     } else {
       setImage(DragonNo);
 
       setTimeout(() => {
-        setImage(dragonImages);
+        setImage(DragonDefault);
       }, 2000);
     }
   };
@@ -80,13 +80,13 @@ export default function Buttons({
       setImage(DragonYoga);
 
       setTimeout(() => {
-        setImage(dragonImages);
+        setImage(DragonDefault);
       }, 3000);
     } else {
       setImage(DragonNo);
 
       setTimeout(() => {
-        setImage(dragonImages);
+        setImage(DragonDefault);
       }, 2000);
     }
   };
