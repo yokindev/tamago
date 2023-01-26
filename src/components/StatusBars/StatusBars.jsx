@@ -1,7 +1,14 @@
 import IconLife from "../../assets/icons/life.png";
 import IconSleep from "../../assets/icons/sleep.png";
 import IconHappiness from "../../assets/icons/happiness.png";
-import * as S from "./StatusBars.styles";
+import {
+  StatusBarContainer,
+  StatusBarTitle,
+  StatusBarBox,
+  StatusBarIcon,
+  StatusBarDiv,
+  StatusBarPercentage,
+} from "../../styles/StatusBars.styles";
 import { useEffect } from "react";
 
 const name = localStorage.getItem("Name");
@@ -22,9 +29,8 @@ export default function StatusBars({
     }, 1000);
 
     return () => {
-      clearTimeout(healthCountDown)
-    }
-      
+      clearTimeout(healthCountDown);
+    };
   }, [health, setHealth]);
 
   useEffect(() => {
@@ -35,9 +41,8 @@ export default function StatusBars({
     }, 1000);
 
     return () => {
-      clearTimeout(happinessCountDown)
-    }
-      
+      clearTimeout(happinessCountDown);
+    };
   }, [happiness, setHappiness]);
 
   useEffect(() => {
@@ -48,32 +53,34 @@ export default function StatusBars({
     }, 1000);
 
     return () => {
-      clearTimeout(sleepCountDown)
-    }
-      
+      clearTimeout(sleepCountDown);
+    };
   }, [sleep, setSleep]);
 
   return (
-    <S.Container>
-      <S.Name>{name}</S.Name>
-      <S.ContainerBar>
-        <S.Icon src={IconLife} />
-        <S.ProgressBar>
-          <S.Percentage style={{ width: `${health}%` }} />
-        </S.ProgressBar>
-      </S.ContainerBar>
-      <S.ContainerBar>
-        <S.Icon src={IconHappiness} />
-        <S.ProgressBar>
-          <S.Percentage style={{ width: `${happiness}%` }} />
-        </S.ProgressBar>
-      </S.ContainerBar>
-      <S.ContainerBar>
-        <S.Icon src={IconSleep} />
-        <S.ProgressBar>
-          <S.Percentage style={{ width: `${sleep}%` }} />
-        </S.ProgressBar>
-      </S.ContainerBar>
-    </S.Container>
+    <StatusBarContainer>
+      <StatusBarTitle>{name}</StatusBarTitle>
+
+      <StatusBarBox>
+        <StatusBarIcon src={IconLife} />
+        <StatusBarDiv>
+          <StatusBarPercentage style={{ width: `${health}%` }} />
+        </StatusBarDiv>
+      </StatusBarBox>
+
+      <StatusBarBox>
+        <StatusBarIcon src={IconHappiness} />
+        <StatusBarDiv>
+          <StatusBarPercentage style={{ width: `${happiness}%` }} />
+        </StatusBarDiv>
+      </StatusBarBox>
+
+      <StatusBarBox>
+        <StatusBarIcon src={IconSleep} />
+        <StatusBarDiv>
+          <StatusBarPercentage style={{ width: `${sleep}%` }} />
+        </StatusBarDiv>
+      </StatusBarBox>
+    </StatusBarContainer>
   );
 }

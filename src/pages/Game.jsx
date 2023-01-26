@@ -5,7 +5,7 @@ import DragonProud from "../assets/images/proud.png";
 import DragonPeace from "../assets/images/peace.png";
 import DragonRelaxed from "../assets/images/relaxed.png";
 import DragonFun from "../assets/images/fun.png";
-import * as S from "../styles/Home.styles";
+import { GameContainer } from "../styles/Game.styles";
 import { useState } from "react";
 
 export default function Game() {
@@ -28,7 +28,7 @@ export default function Game() {
   localStorage.setItem("Image", image);
 
   return (
-    <S.Container>
+    <GameContainer>
       <StatusBars
         health={health}
         happiness={happiness}
@@ -43,7 +43,6 @@ export default function Game() {
         sleep={sleep}
         image={image}
         setImage={setImage}
-        dragonImages={dragonImages}
       />
       <Buttons
         health={health}
@@ -53,7 +52,8 @@ export default function Game() {
         setHappiness={setHappiness}
         setSleep={setSleep}
         setImage={setImage}
+        dragonImages={dragonImages}
       />
-    </S.Container>
+    </GameContainer>
   );
 }

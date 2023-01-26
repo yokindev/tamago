@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const HomeContainer = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -9,7 +9,7 @@ export const Container = styled.div`
   background-color: #e0fbfc;
 `;
 
-export const Title = styled.h1`
+export const HomeTitle = styled.h1`
   margin: 0;
   text-align: center;
   font-size: 45px;
@@ -19,11 +19,11 @@ export const Title = styled.h1`
   -webkit-text-fill-color: transparent;
 `;
 
-export const Image = styled.img`
+export const HomeImage = styled.img`
   width: 300px;
 `;
 
-export const Input = styled.input`
+export const HomeInput = styled.input`
   border: 3px solid #3d5a80;
   width: 200px;
   border-radius: 50px;
@@ -33,7 +33,7 @@ export const Input = styled.input`
   text-align: center;
 `;
 
-export const Button = styled.button`
+export const HomeButton = styled.button`
   border: none;
   padding: 15px;
   border-radius: 50px;

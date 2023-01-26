@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const StatusBarContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 
-export const Name = styled.h1`
+export const StatusBarTitle = styled.h1`
   margin: 0;
   margin-bottom: 15px;
   font-size: 45px;
@@ -16,18 +16,18 @@ export const Name = styled.h1`
   -webkit-text-fill-color: transparent;
 `;
 
-export const ContainerBar = styled.div`
+export const StatusBarBox = styled.div`
   display: flex;
   align-items: center;
 `;
 
-export const Icon = styled.img`
+export const StatusBarIcon = styled.img`
   width: 25px;
   margin-top: 10px;
   margin-right: 10px;
 `;
 
-export const ProgressBar = styled.div`
+export const StatusBarDiv = styled.div`
   width: 250px;
   height: 20px;
   margin-top: 10px;
@@ -36,7 +36,7 @@ export const ProgressBar = styled.div`
   background-color: white;
 `;
 
-export const Percentage = styled.span`
+export const StatusBarPercentage = styled.span`
   display: block;
   height: 100%;
   background-color: #98c1d9;

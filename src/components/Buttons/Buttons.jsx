@@ -7,7 +7,11 @@ import DragonSing from "../../assets/images/sing.png";
 import DragonRest from "../../assets/images/rest.png";
 import DragonYoga from "../../assets/images/yoga.png";
 import DragonNo from "../../assets/images/no.png";
-import * as S from "./Buttons.styles";
+import {
+  ButtonsContainer,
+  ButtonsBox,
+  ButtonsIcon,
+} from "../../styles/Buttons.styles";
 
 export default function Buttons({
   health,
@@ -88,19 +92,22 @@ export default function Buttons({
   };
 
   return (
-    <S.Container>
-      <S.Button onClick={eat}>
-        <S.Icon src={IconFood} />
-      </S.Button>
-      <S.Button onClick={sing}>
-        <S.Icon src={IconMusic} />
-      </S.Button>
-      <S.Button onClick={rest}>
-        <S.Icon src={IconBed} />
-      </S.Button>
-      <S.Button onClick={medicine}>
-        <S.Icon src={IconMedicine} />
-      </S.Button>
-    </S.Container>
+    <ButtonsContainer>
+      <ButtonsBox onClick={eat}>
+        <ButtonsIcon src={IconFood} />
+      </ButtonsBox>
+
+      <ButtonsBox onClick={sing}>
+        <ButtonsIcon src={IconMusic} />
+      </ButtonsBox>
+
+      <ButtonsBox onClick={rest}>
+        <ButtonsIcon src={IconBed} />
+      </ButtonsBox>
+
+      <ButtonsBox onClick={medicine}>
+        <ButtonsIcon src={IconMedicine} />
+      </ButtonsBox>
+    </ButtonsContainer>
   );
 }

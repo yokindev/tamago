@@ -1,5 +1,11 @@
 import { useNavigate } from "react-router-dom";
-import * as S from "../styles/Home.styles";
+import {
+  HomeContainer,
+  HomeTitle,
+  HomeImage,
+  HomeInput,
+  HomeButton,
+} from "../styles/Home.styles";
 import DragonHello from "../assets/images/hello.png";
 
 export default function Home() {
@@ -14,15 +20,15 @@ export default function Home() {
   };
 
   return (
-    <S.Container>
-      <S.Title>TRAIN YOUR DRAGON</S.Title>
-      <S.Image src={DragonHello} />
-      <S.Input
+    <HomeContainer>
+      <HomeTitle>TRAIN YOUR DRAGON</HomeTitle>
+      <HomeImage src={DragonHello} />
+      <HomeInput
         type="text"
         placeholder="Enter a name ..."
         onChange={(e) => setName(e)}
       />
-      <S.Button onClick={play}>Go</S.Button>
-    </S.Container>
+      <HomeButton onClick={play}>Go</HomeButton>
+    </HomeContainer>
   );
 }

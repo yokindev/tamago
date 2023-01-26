@@ -1,6 +1,7 @@
-import * as S from "./Moods.styles";
+import { MoodsImage } from "../../styles/Moods.styles";
 
 export default function Moods({ health, happiness, sleep, image, setImage }) {
+
   // const chooseImage = () => {
   //   switch (health) {
   //     case health < 75 & health > 50:
@@ -13,6 +14,6 @@ export default function Moods({ health, happiness, sleep, image, setImage }) {
   //       return DragonImage3;
   //   }
   // };
-
-  return <S.Image src={image} />;
+  
+  return <MoodsImage src={image} />;
 }

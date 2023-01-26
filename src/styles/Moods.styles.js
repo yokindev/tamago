@@ -1,5 +1,5 @@
 import styled from "styled-components";
 
-export const Image = styled.img`
+export const MoodsImage = styled.img`
   width: 350px;
 `;
