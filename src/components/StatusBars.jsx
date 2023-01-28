@@ -11,8 +11,6 @@ import {
 } from "../styles/StatusBars.styles";
 import { useEffect } from "react";
 
-const name = localStorage.getItem("Name");
-
 export default function StatusBars({
   health,
   setHealth,
@@ -21,6 +19,8 @@ export default function StatusBars({
   sleep,
   setSleep,
 }) {
+  const name = localStorage.getItem("Name");
+
   const bars = [
     {
       icon: IconLife,
@@ -80,7 +80,7 @@ export default function StatusBars({
         <StatusBarBox key={index}>
           <StatusBarIcon src={bar.icon} />
           <StatusBarDiv>
-            <StatusBarPercentage style={{ width: `${bar.progress}%` }} />
+            <StatusBarPercentage percentage={bar.progress} />
           </StatusBarDiv>
         </StatusBarBox>
       ))}

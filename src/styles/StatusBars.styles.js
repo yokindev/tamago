@@ -38,6 +38,7 @@ export const StatusBarDiv = styled.div`
 
 export const StatusBarPercentage = styled.span`
   display: block;
+  width: ${props => props.percentage}%;
   height: 100%;
   background-color: #98c1d9;
 `;
