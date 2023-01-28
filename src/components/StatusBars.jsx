@@ -21,6 +21,21 @@ export default function StatusBars({
   sleep,
   setSleep,
 }) {
+  const bars = [
+    {
+      icon: IconLife,
+      progress: health,
+    },
+    {
+      icon: IconHappiness,
+      progress: happiness,
+    },
+    {
+      icon: IconSleep,
+      progress: sleep,
+    },
+  ];
+
   useEffect(() => {
     if (!health) return;
 
@@ -61,26 +76,14 @@ export default function StatusBars({
     <StatusBarContainer>
       <StatusBarTitle>{name}</StatusBarTitle>
 
-      <StatusBarBox>
-        <StatusBarIcon src={IconLife} />
-        <StatusBarDiv>
-          <StatusBarPercentage style={{ width: `${health}%` }} />
-        </StatusBarDiv>
-      </StatusBarBox>
-
-      <StatusBarBox>
-        <StatusBarIcon src={IconHappiness} />
-        <StatusBarDiv>
-          <StatusBarPercentage style={{ width: `${happiness}%` }} />
-        </StatusBarDiv>
-      </StatusBarBox>
-
-      <StatusBarBox>
-        <StatusBarIcon src={IconSleep} />
-        <StatusBarDiv>
-          <StatusBarPercentage style={{ width: `${sleep}%` }} />
-        </StatusBarDiv>
-      </StatusBarBox>
+      {bars.map((bar, index) => (
+        <StatusBarBox key={index}>
+          <StatusBarIcon src={bar.icon} />
+          <StatusBarDiv>
+            <StatusBarPercentage style={{ width: `${bar.progress}%` }} />
+          </StatusBarDiv>
+        </StatusBarBox>
+      ))}
     </StatusBarContainer>
   );
 }
