@@ -91,23 +91,32 @@ export default function Buttons({
     }
   };
 
+  const buttons = [
+    {
+      function: eat,
+      icon: IconFood,
+    },
+    {
+      function: sing,
+      icon: IconMusic,
+    },
+    {
+      function: rest,
+      icon: IconBed,
+    },
+    {
+      function: medicine,
+      icon: IconMedicine,
+    },
+  ];
+
   return (
     <ButtonsContainer>
-      <ButtonsBox onClick={eat}>
-        <ButtonsIcon src={IconFood} />
+      {buttons.map((button, index) => (
+        <ButtonsBox key={index} onClick={button.function}>
+        <ButtonsIcon src={button.icon} />
       </ButtonsBox>
-
-      <ButtonsBox onClick={sing}>
-        <ButtonsIcon src={IconMusic} />
-      </ButtonsBox>
-
-      <ButtonsBox onClick={rest}>
-        <ButtonsIcon src={IconBed} />
-      </ButtonsBox>
-
-      <ButtonsBox onClick={medicine}>
-        <ButtonsIcon src={IconMedicine} />
-      </ButtonsBox>
+      ))}
     </ButtonsContainer>
   );
 }
