@@ -40,7 +40,7 @@ export default function StatusBars({
     if (!health) return;
 
     const healthCountDown = setTimeout(() => {
-      setHealth(health - 1);
+      setHealth((health) => health - 1);
     }, 2000);
 
     return () => {
