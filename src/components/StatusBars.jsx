@@ -52,7 +52,7 @@ export default function StatusBars({
     if (!happiness) return;
 
     const happinessCountDown = setTimeout(() => {
-      setHappiness(happiness - 1);
+      setHappiness((happiness) => happiness - 1);
     }, 1000);
 
     return () => {
@@ -64,7 +64,7 @@ export default function StatusBars({
     if (!sleep) return;
 
     const sleepCountDown = setTimeout(() => {
-      setSleep(sleep - 1);
+      setSleep((sleep) => sleep - 1);
     }, 3000);
 
     return () => {
