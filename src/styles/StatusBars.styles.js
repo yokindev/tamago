@@ -11,7 +11,7 @@ export const StatusBarTitle = styled.h1`
   margin-bottom: 15px;
   font-size: 45px;
   font-weight: 900;
-  background: -webkit-linear-gradient(180deg, #3d5a80, #98c1d9, #ee6c4d);
+  background: -webkit-linear-gradient(135deg, #3d5a80, #98c1d9, #ee6c4d);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 `;

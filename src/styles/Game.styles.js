@@ -13,8 +13,14 @@ export const GameImage = styled.img`
   width: 350px;
 `;
 
-export const GameMessage = styled.p`
-  font-size: 20px;
+export const GameMessage = styled.h1`
+  margin: 0;
+  text-align: center;
+  font-size: 45px;
+  font-weight: 900;
+  background: -webkit-linear-gradient(270deg, #3d5a80, #98c1d9, #ee6c4d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 `;
 
 export const GameButton = styled.button`

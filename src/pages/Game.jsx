@@ -3,8 +3,14 @@ import Moods from "../components/Moods";
 import Buttons from "../components/Buttons";
 import DragonDefault from "../assets/images/default.png";
 import DragonDead from "../assets/images/dead.png";
-import { GameContainer, GameImage, GameMessage, GameButton } from "../styles/Game.styles";
+import {
+  GameContainer,
+  GameImage,
+  GameMessage,
+  GameButton,
+} from "../styles/Game.styles";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Game() {
   const [health, setHealth] = useState(100);
@@ -16,6 +22,14 @@ export default function Game() {
   localStorage.setItem("Happiness", happiness);
   localStorage.setItem("Sleep", sleep);
   localStorage.setItem("Image", image);
+
+  const name = (localStorage.getItem("Name")).toUpperCase();
+
+  const navigate = useNavigate();
+  const back = () => {
+    navigate("/");
+    localStorage.clear();
+  };
 
   return (
     <>
@@ -48,9 +62,9 @@ export default function Game() {
         </GameContainer>
       ) : (
         <GameContainer>
-          <GameMessage>You just killed your dragon</GameMessage>
+          <GameMessage>{name} IS DEAD</GameMessage>
           <GameImage src={DragonDead} />
-          <GameButton>Back Home</GameButton>
+          <GameButton onClick={back}>Home</GameButton>
         </GameContainer>
       )}
     </>

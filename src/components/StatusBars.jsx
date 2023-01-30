@@ -19,7 +19,7 @@ export default function StatusBars({
   sleep,
   setSleep,
 }) {
-  const name = localStorage.getItem("Name");
+  const name = (localStorage.getItem("Name")).toUpperCase();
 
   const bars = [
     {
