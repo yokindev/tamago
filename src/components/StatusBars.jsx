@@ -37,40 +37,18 @@ export default function StatusBars({
   ];
 
   useEffect(() => {
-    if (!health) return;
+    if (health && happiness && sleep) {
+      const countDown = setTimeout(() => {
+        setHealth(health - 5);
+        setHappiness(happiness - 2);
+        setSleep(sleep - 4);
+      }, 2000);
 
-    const healthCountDown = setTimeout(() => {
-      setHealth(health - 1);
-    }, 2000);
-
-    return () => {
-      clearTimeout(healthCountDown);
-    };
-  }, [health, setHealth]);
-
-  useEffect(() => {
-    if (!happiness) return;
-
-    const happinessCountDown = setTimeout(() => {
-      setHappiness(happiness - 1);
-    }, 1000);
-
-    return () => {
-      clearTimeout(happinessCountDown);
-    };
-  }, [happiness, setHappiness]);
-
-  useEffect(() => {
-    if (!sleep) return;
-
-    const sleepCountDown = setTimeout(() => {
-      setSleep(sleep - 1);
-    }, 3000);
-
-    return () => {
-      clearTimeout(sleepCountDown);
-    };
-  }, [sleep, setSleep]);
+      return () => {
+        clearTimeout(countDown);
+      };
+    }
+  }, [health, setHealth, happiness, setHappiness, sleep, setSleep]);
 
   return (
     <StatusBarContainer>

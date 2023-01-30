@@ -5,9 +5,9 @@ import DragonShocked from "../assets/images/shocked.png";
 import { MoodsImage } from "../styles/Moods.styles";
 
 export default function Moods({ health, happiness, sleep, image, setImage }) {
-  if (!health) {
+  if (!health || !happiness || !sleep) {
     setImage(DragonShocked);
-  } else if (health < 25 && health > 1) {
+  } else if (health < 25) {
     setImage(DragonSick);
   } else if (sleep < 25) {
     setImage(DragonBoring);

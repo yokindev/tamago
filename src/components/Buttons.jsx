@@ -30,7 +30,7 @@ export default function Buttons({
 
       setTimeout(() => {
         setImage(DragonDefault);
-      }, 3000);
+      }, 2000);
     } else {
       setImage(DragonNo);
 
@@ -47,7 +47,7 @@ export default function Buttons({
 
       setTimeout(() => {
         setImage(DragonDefault);
-      }, 3000);
+      }, 2000);
     } else {
       setImage(DragonNo);
 
@@ -64,7 +64,7 @@ export default function Buttons({
 
       setTimeout(() => {
         setImage(DragonDefault);
-      }, 3000);
+      }, 2000);
     } else {
       setImage(DragonNo);
 
@@ -81,7 +81,7 @@ export default function Buttons({
 
       setTimeout(() => {
         setImage(DragonDefault);
-      }, 3000);
+      }, 2000);
     } else {
       setImage(DragonNo);
 
