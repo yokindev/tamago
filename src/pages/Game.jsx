@@ -2,7 +2,8 @@ import StatusBars from "../components/StatusBars";
 import Moods from "../components/Moods";
 import Buttons from "../components/Buttons";
 import DragonDefault from "../assets/images/default.png";
-import { GameContainer } from "../styles/Game.styles";
+import DragonDead from "../assets/images/dead.png";
+import { GameContainer, GameImage, GameMessage, GameButton } from "../styles/Game.styles";
 import { useState } from "react";
 
 export default function Game() {
@@ -17,31 +18,41 @@ export default function Game() {
   localStorage.setItem("Image", image);
 
   return (
-    <GameContainer>
-      <StatusBars
-        health={health}
-        happiness={happiness}
-        sleep={sleep}
-        setHealth={setHealth}
-        setHappiness={setHappiness}
-        setSleep={setSleep}
-      />
-      <Moods
-        health={health}
-        happiness={happiness}
-        sleep={sleep}
-        image={image}
-        setImage={setImage}
-      />
-      <Buttons
-        health={health}
-        happiness={happiness}
-        sleep={sleep}
-        setHealth={setHealth}
-        setHappiness={setHappiness}
-        setSleep={setSleep}
-        setImage={setImage}
-      />
-    </GameContainer>
+    <>
+      {health && happiness && sleep ? (
+        <GameContainer>
+          <StatusBars
+            health={health}
+            happiness={happiness}
+            sleep={sleep}
+            setHealth={setHealth}
+            setHappiness={setHappiness}
+            setSleep={setSleep}
+          />
+          <Moods
+            health={health}
+            happiness={happiness}
+            sleep={sleep}
+            image={image}
+            setImage={setImage}
+          />
+          <Buttons
+            health={health}
+            happiness={happiness}
+            sleep={sleep}
+            setHealth={setHealth}
+            setHappiness={setHappiness}
+            setSleep={setSleep}
+            setImage={setImage}
+          />
+        </GameContainer>
+      ) : (
+        <GameContainer>
+          <GameMessage>You just killed your dragon</GameMessage>
+          <GameImage src={DragonDead} />
+          <GameButton>Back Home</GameButton>
+        </GameContainer>
+      )}
+    </>
   );
 }
