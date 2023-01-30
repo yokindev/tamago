@@ -114,8 +114,8 @@ export default function Buttons({
     <ButtonsContainer>
       {buttons.map((button, index) => (
         <ButtonsBox key={index} onClick={button.function}>
-        <ButtonsIcon src={button.icon} />
-      </ButtonsBox>
+          <ButtonsIcon src={button.icon} />
+        </ButtonsBox>
       ))}
     </ButtonsContainer>
   );
