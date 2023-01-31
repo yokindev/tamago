@@ -31,7 +31,7 @@ export const HomeImage = styled.img`
   width: 500px;
 
   @media (max-width: 768px) {
-    width: 300px;
+    width: 350px;
   }
 `;
 
