@@ -9,15 +9,16 @@ import {
 import DragonHello from "../assets/images/hello.png";
 
 export default function Home() {
+  const navigate = useNavigate();
+
   const setName = (e) => {
-    if (e.key === 'Enter') {
+    if (e.key === "Enter") {
       const name = e.target.value;
-    localStorage.setItem("Name", name);
-    play()
+      localStorage.setItem("Name", name);
+      navigate("/game");
     }
   };
 
-  const navigate = useNavigate();
   const play = () => {
     navigate("/game");
   };
