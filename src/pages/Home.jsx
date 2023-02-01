@@ -7,21 +7,25 @@ import {
   HomeButton,
 } from "../styles/Home.styles";
 import DragonHello from "../assets/images/hello.png";
+import { useState } from "react";
 
 export default function Home() {
+  const [name, setName] = useState("");
+  localStorage.setItem("Name", name);
+
   const navigate = useNavigate();
 
-  const setName = (e) => {
+  const handleKey = (e) => {
     if (e.key === "Enter") {
-      const name = e.target.value;
-      localStorage.setItem("Name", name);
       navigate("/game");
     }
   };
 
   const play = () => {
-    navigate("/game");
-  };
+    if (name) {
+      navigate('/game')
+    }
+  }
 
   return (
     <HomeContainer>
@@ -30,7 +34,8 @@ export default function Home() {
       <HomeInput
         type="text"
         placeholder="Enter a name ..."
-        onKeyDown={setName}
+        onKeyDown={handleKey}
+        onChange={(e) => setName(e.target.value)}
       />
       <HomeButton onClick={play}>Go</HomeButton>
     </HomeContainer>
