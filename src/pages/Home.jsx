@@ -10,8 +10,11 @@ import DragonHello from "../assets/images/hello.png";
 
 export default function Home() {
   const setName = (e) => {
-    const name = e.target.value;
+    if (e.key === 'Enter') {
+      const name = e.target.value;
     localStorage.setItem("Name", name);
+    play()
+    }
   };
 
   const navigate = useNavigate();
@@ -26,7 +29,7 @@ export default function Home() {
       <HomeInput
         type="text"
         placeholder="Enter a name ..."
-        onChange={(e) => setName(e)}
+        onKeyDown={setName}
       />
       <HomeButton onClick={play}>Go</HomeButton>
     </HomeContainer>
