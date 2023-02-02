@@ -99,7 +99,7 @@ export default function Game() {
   };
 
   const navigate = useNavigate();
-  
+
   const back = () => {
     navigate("/");
     localStorage.clear();
@@ -124,7 +124,7 @@ export default function Game() {
             image={image}
             setImage={setImage}
           />
-          <Buttons eat={eat} sing={sing} rest={rest} medicine={medicine}/>
+          <Buttons eat={eat} sing={sing} rest={rest} medicine={medicine} />
         </GameContainer>
       ) : (
         <GameContainer>
