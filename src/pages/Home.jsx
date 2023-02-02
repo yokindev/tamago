@@ -16,7 +16,7 @@ export default function Home() {
   const navigate = useNavigate();
 
   const handleKey = (e) => {
-    if (e.key === "Enter") {
+    if (e.key === "Enter" && name) {
       navigate("/game");
     }
   };
