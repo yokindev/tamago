@@ -5,12 +5,8 @@ export const GameContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   background-color: #e0fbfc;
-
-  @media (max-width: 768px) {
-    justify-content: space-around;
-  }
 `;
 
 export const GameMessage = styled.h1`
@@ -28,11 +24,9 @@ export const GameMessage = styled.h1`
 `;
 
 export const GameImage = styled.img`
-  width: 500px;
-
-  @media (max-width: 768px) {
-    width: 350px;
-  }
+  max-width: 500px;
+  min-width: 350px;
+  width: 100%;
 `;
 
 export const GameButton = styled.button`

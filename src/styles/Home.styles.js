@@ -5,7 +5,7 @@ export const HomeContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   background-color: #e0fbfc;
 `;
 
@@ -25,7 +25,7 @@ export const HomeTitle = styled.h1`
 
 export const HomeImage = styled.img`
   max-width: 500px;
-  min-width: 300px;
+  min-width: 350px;
   width: 100%;
 `;
 

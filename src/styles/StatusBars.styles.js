@@ -38,7 +38,9 @@ export const StatusBarIcon = styled.img`
 `;
 
 export const StatusBarDiv = styled.div`
-  width: 650px;
+  max-width: 650px;
+  min-width: 300px;
+  width: 100%;
   height: 40px;
   margin-top: 30px;
   border: 3px solid #3d5a80;
@@ -46,7 +48,6 @@ export const StatusBarDiv = styled.div`
   background-color: white;
 
   @media (max-width: 768px) {
-    width: 250px;
     height: 20px;
     margin-top: 10px;
   }
