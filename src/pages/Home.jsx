@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import DragonHello from "../assets/images/hello.png";
 import {
   HomeContainer,
   HomeTitle,
@@ -6,14 +8,12 @@ import {
   HomeInput,
   HomeButton,
 } from "../styles/Home.styles";
-import DragonHello from "../assets/images/hello.png";
-import { useState } from "react";
 
 export default function Home() {
+  const navigate = useNavigate();
+
   const [name, setName] = useState("");
   localStorage.setItem("Name", name);
-
-  const navigate = useNavigate();
 
   const handleKey = (e) => {
     if (e.key === "Enter" && name) {
@@ -23,9 +23,9 @@ export default function Home() {
 
   const play = () => {
     if (name) {
-      navigate('/game')
+      navigate("/game");
     }
-  }
+  };
 
   return (
     <HomeContainer>

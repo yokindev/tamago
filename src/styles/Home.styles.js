@@ -7,10 +7,6 @@ export const HomeContainer = styled.div`
   align-items: center;
   justify-content: space-evenly;
   background-color: #e0fbfc;
-
-  @media (max-width: 768px) {
-    justify-content: space-around;
-  }
 `;
 
 export const HomeTitle = styled.h1`
@@ -28,16 +24,16 @@ export const HomeTitle = styled.h1`
 `;
 
 export const HomeImage = styled.img`
-  width: 500px;
-
-  @media (max-width: 768px) {
-    width: 350px;
-  }
+  max-width: 500px;
+  min-width: 300px;
+  width: 100%;
 `;
 
 export const HomeInput = styled.input`
   border: 3px solid #3d5a80;
-  width: 400px;
+  max-width: 300px;
+  min-width: 200px;
+  width: 100%;
   border-radius: 50px;
   padding: 25px;
   font-weight: 900;
@@ -45,7 +41,6 @@ export const HomeInput = styled.input`
   text-align: center;
 
   @media (max-width: 768px) {
-    width: 200px;
     padding: 15px;
     font-size: 15px;
   }
