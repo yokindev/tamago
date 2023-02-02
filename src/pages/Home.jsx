@@ -1,6 +1,5 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import DragonHello from "../assets/images/hello.png";
+
 import {
   HomeContainer,
   HomeTitle,
@@ -8,6 +7,9 @@ import {
   HomeInput,
   HomeButton,
 } from "../styles/Home.styles";
+
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
   const navigate = useNavigate();

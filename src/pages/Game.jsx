@@ -1,6 +1,7 @@
 import StatusBars from "../components/StatusBars";
 import Moods from "../components/Moods";
 import Buttons from "../components/Buttons";
+
 import DragonDefault from "../assets/images/default.png";
 import DragonEat from "../assets/images/eat.png";
 import DragonSing from "../assets/images/sing.png";
@@ -8,12 +9,14 @@ import DragonRest from "../assets/images/rest.png";
 import DragonYoga from "../assets/images/yoga.png";
 import DragonNo from "../assets/images/no.png";
 import DragonDead from "../assets/images/dead.png";
+
 import {
   GameContainer,
   GameImage,
   GameMessage,
   GameButton,
 } from "../styles/Game.styles";
+
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 

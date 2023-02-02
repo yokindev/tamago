@@ -1,6 +1,7 @@
 import IconLife from "../assets/icons/life.png";
 import IconSleep from "../assets/icons/sleep.png";
 import IconHappiness from "../assets/icons/happiness.png";
+
 import {
   StatusBarContainer,
   StatusBarTitle,
@@ -9,6 +10,7 @@ import {
   StatusBarDiv,
   StatusBarPercentage,
 } from "../styles/StatusBars.styles";
+
 import { useEffect } from "react";
 
 export default function StatusBars({
@@ -19,7 +21,7 @@ export default function StatusBars({
   sleep,
   setSleep,
 }) {
-  const name = (localStorage.getItem("Name")).toUpperCase();
+  const name = localStorage.getItem("Name").toUpperCase();
 
   const bars = [
     {

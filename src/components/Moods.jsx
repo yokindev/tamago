@@ -4,14 +4,18 @@ import DragonSick from "../assets/images/sick.png";
 
 import { MoodsImage } from "../styles/Moods.styles";
 
+import { useEffect } from "react";
+
 export default function Moods({ health, happiness, sleep, image, setImage }) {
-  if (health < 25) {
-    setImage(DragonSick);
-  } else if (sleep < 25) {
-    setImage(DragonTired);
-  } else if (happiness < 25) {
-    setImage(DragonSad);
-  }
+  useEffect(() => {
+    if (health < 25) {
+      setImage(DragonSick);
+    } else if (sleep < 25) {
+      setImage(DragonTired);
+    } else if (happiness < 25) {
+      setImage(DragonSad);
+    }
+  }, [health, happiness, sleep, setImage]);
 
   return <MoodsImage src={image} />;
 }
